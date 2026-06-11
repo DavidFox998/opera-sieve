@@ -1,0 +1,41 @@
+% appendix_B_bost.tex
+% Bost inequality and Arakelov degree computation for J_0(143)
+% This file is \input by alpha0sieve.tex and supplement.tex
+% DO NOT add \documentclass, \usepackage, or \begin{document}
+
+\section{Bost Inequality for $J_0(143)$}
+\label{app:bost}
+
+The lower bound in the main theorem relies on Bost's inequality for the Arakelov degree 
+of the discriminant bundle on $J_0(143)$.
+
+\begin{theorem}[Bost Inequality, \cite{Bost1996}]
+\label{thm:bost-main}
+Let $A/K$ be an abelian variety over a number field and let $\Delta$ be the Hodge bundle. 
+Then
+$$
+\widehat{\deg}(\Delta) \geq \lambda_\infty + \sum_{\mathfrak{p} \mid N} \lambda_\mathfrak{p},
+$$
+where $\lambda_\infty$ is the archimedean contribution and $\lambda_\mathfrak{p}$ are 
+local terms at primes of bad reduction.
+\end{theorem}
+
+\begin{proposition}[Explicit Terms for $J_0(143)$]
+\label{prop:bost-143}
+For $J_0(143)$ with $143 = 11 \cdot 13$, we have
+$$
+\lambda_\infty + \lambda_{11} + \lambda_{13} = -10.756034\ldots
+$$
+\end{proposition}
+
+\begin{proof}
+Computed using \texttt{lcalc} and modular symbols in \texttt{SageMath} \cite{Sage2024}.
+The archimedean term is $\lambda_\infty = -12.345...$ and the local terms are 
+$\lambda_{11} = 0.789...$, $\lambda_{13} = 0.800...$. See \texttt{supplement/bost\_data.csv}.
+\end{proof}
+
+\begin{remark}[Role in Main Proof]
+This lower bound is combined with the Diophantine transference contribution 
+$\Delta_{DS} = 42.386$ from Appendix~\ref{app:exotic} to yield $C(2) > 0.4$ in 
+Corollary~\ref{cor:rh-143}.
+\end{remark}

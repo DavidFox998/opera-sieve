@@ -1,0 +1,3 @@
+197ef385acb341db6b5565c8efb1970d275386502fe60414ff8363739c5aebee
+
+Note: n = index of convergent of $10/\pi$. h, l = high/low 64-bit words for p_i = h<<64 |

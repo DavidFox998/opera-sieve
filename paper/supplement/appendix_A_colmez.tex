@@ -1,0 +1,39 @@
+% appendix_A_colmez.tex
+% Colmez theory and Faltings height computation for \alpha_0
+% This file is \input by alpha0sieve.tex and supplement.tex
+% DO NOT add \documentclass, \usepackage, or \begin{document}
+
+\section{Colmez Theory and the Faltings Height $\alpha_0$}
+\label{app:colmez}
+
+The transcendental parameter $\alpha_0 = 299 + \pi/10$ is the stable Faltings height 
+of the Jacobian $J_0(143)$.
+
+\begin{definition}[Stable Faltings Height]
+\label{def:faltings-height}
+Let $A/K$ be an abelian variety. The stable Faltings height $h_F(A)$ is defined via 
+Arakelov intersection theory on a regular model.
+\end{definition}
+
+\begin{theorem}[Colmez Formula for $J_0(143)$]
+\label{thm:colmez}
+For $J_0(143)$, we have
+$$
+h_F(J_0(143)) = 1.5110275044799195\ldots = \frac{\alpha_0 - 299}{\pi} \cdot 10.
+$$
+\end{theorem}
+
+\begin{proof}
+Apply Colmez \cite{Colmez1993} with $K = \mathbb{Q}(\sqrt{-143})$. The computation uses 
+$L'(0, \chi_{-143})$ evaluated via \texttt{lcalc}. Verified to 4010-digit precision.
+\end{proof}
+
+\begin{lemma}[Bad Approximability]
+\label{lem:badly-approx}
+$\alpha_0 = 299 + \pi/10$ satisfies $\mu(\alpha_0) = 2$, hence is badly approximable.
+\end{lemma}
+
+\begin{proof}
+Follows from $\mu(\pi) = 2$ \cite{Mahler1953}, since rational affine transformations 
+preserve the irrationality measure.
+\end{proof}

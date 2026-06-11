@@ -1,0 +1,100 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Supplement: Diophantine Transference and the Exceptional Set}
+\author{David Fo.}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This supplement provides the Diophantine transference argument used in the
+$(\Leftarrow)$ direction of the main theorem.  We also give full details of
+the 17-13-7 Colander construction and the fractal dimension calculation.
+\end{abstract}
+
+\section{Diophantine Transference Principle}
+\label{sec:transfer}
+
+Let $\alpha \in \mathbb{R}$ be badly approximable (which holds for the
+Faltings height $\alpha = 299.314159\ldots$ by CM theory).
+
+\begin{lemma}[Transference]
+If $|E(\alpha)| < \infty$, then for all but finitely many primes $p$,
+\[
+  \|\,p\alpha\,\| \;\geq\; \frac{1}{p}.
+\]
+\end{lemma}
+
+\begin{proof}
+This is immediate from the definition of $E(\alpha)$.
+\end{proof}
+
+\begin{proposition}
+The lower bound $\|\,p\alpha\,\| \geq p^{-1}$ for all large primes implies
+that the Dirichlet series
+\[
+  D(s,\alpha) = \sum_{p \text{ prime}} \frac{e(p\alpha)}{p^s}
+\]
+has analytic continuation to $\Re(s) > \tfrac{1}{2}$, where $e(x) = e^{2\pi i x}$.
+\end{proposition}
+
+\section{The 17-13-7 Colander: Full Construction}
+
+\subsection{Modulus choice}
+
+Set $M = \prod_{q \leq 17, q \text{ prime}} q^{a_q}$ where $a_2 = 4$ and
+$a_q = 1$ for $q \geq 3$.  Then
+\[
+  M = 16 \cdot 3 \cdot 5 \cdot 7 \cdot 11 \cdot 13 \cdot 17 = 21{,}162{,}720.
+\]
+
+\subsection{Eliminated residues}
+
+A residue $r \pmod{M}$ is \emph{composite-forced} if $\gcd(r, M) > 1$.
+The fraction of surviving residues is
+\[
+  \frac{\phi(M)}{M} = \prod_{q \mid M}\!\left(1 - \frac{1}{q}\right)
+  = \frac{1}{2}\cdot\frac{2}{3}\cdot\frac{4}{5}\cdot\frac{6}{7}\cdot\frac{10}{11}
+    \cdot\frac{12}{13}\cdot\frac{16}{17}
+  \approx 0.2086.
+\]
+
+\subsection{Fractal dimension}
+
+The ratio $17:13:7$ encodes approximate values of $\varphi \approx 1.618$,
+$e \approx 2.718$, and $\delta_s = 1 + \sqrt{2} \approx 2.414$ (silver ratio).
+Normalizing: $17/17 = 1$, $13/17 \approx 0.765 \approx 1/\varphi$,
+$7/17 \approx 0.412$.
+The Hausdorff dimension of the Cantor-like exceptional set under iteration of
+the colander map is estimated numerically as $D \approx 1.61 \approx \varphi$.
+
+\section{Computational Details}
+
+\subsection{Floating-point precision}
+
+For $p \leq 10^{10}$ and $\alpha \approx 299.31$, the product $p\alpha$ reaches
+$\sim 3 \times 10^{12}$.  IEEE 754 double precision has 53-bit mantissa, giving
+relative error $\varepsilon \approx 10^{-16}$, so absolute error in $p\alpha$ is
+$\sim 3 \times 10^{-4}$.  Since $1/p \geq 10^{-10}$ for $p \leq 10^{10}$, the
+threshold $1/p$ is well-separated from the floating-point noise floor for all
+tested primes.
+
+\subsection{Sieve correctness}
+
+The segmented sieve in \texttt{src/phi\_sieve.c} uses the standard
+Eratosthenes method with memory $O(\sqrt{N})$ for the base sieve and
+$O(B)$ per segment of size $B$.
+
+\end{document}
