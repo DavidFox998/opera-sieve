@@ -128,3 +128,43 @@ Anyone can clone the repo, run the five commands above, and obtain
 their own copy of the certificate plus their own ledger SHA chain.
 The Genesis seal and the Lean axiom-debt `[]` result are pinned and
 will fail loudly under tampering.
+
+---
+
+## Yang-Mills Tower — Clay Problem: Two Parts (July 1 2026)
+
+The Clay YM Millennium Problem requires proving TWO things for SU(3) pure Yang-Mills in R^4:
+
+### Part 1 — Existence
+**Construct a QFT satisfying Wightman / OS axioms for SU(3) YM.**
+
+Lean theorems (0 sorry, classical trio, unconditional):
+
+| Theorem | Statement | Status |
+|---------|-----------|--------|
+| `haarSU3` | Haar measure on SU(3) | PROVED |
+| `PeterWeyl_Summable_SU3` | sum dim(rho)^2 exp(-beta C2) summable | PROVED |
+| `kp_lattice_gap_certified` | Kotecky-Preiss: gap_kp_star > 0 | PROVED |
+| `jacobiAnger_proved` (5 sub-steps) | JacobiAnger_FormCoeff | PROVED |
+| `torusElt_mem_SU3`, `weyl_denominator_nonneg` | Maximal torus + Weyl | PROVED |
+
+Lattice SU(3) YM existence: **PROVED** (classical trio, 0 sorry).
+OS/Wightman continuum reconstruction: **OPEN** (Clay Surface #1).
+
+### Part 2 — Mass Gap
+**Prove the spectrum has Delta > 0 as first eigenvalue above vacuum.**
+
+```
+bb_w1_weyl_lt          w1_weyl_series beta0 < 1/7     PROVED (unconditional, N=5 Bessel)
+  +
+Cert_Arb_SzegoGap      w1_haar = w1_weyl_series        (Gross-Witten 1980, PRD 21:446)
+  -->  rho_SU3 < 1/7                                   CLOSED  (rho_lt_seventh_cert)
+  -->  0 < mass_gap_lb                                 CLOSED  (mass_gap_lb_pos_cert)
+  -->  EXISTS Delta > 0, Delta <= mass_gap_lb           CLOSED  (ym_gap_exists_cert)
+```
+
+Axioms: {propext, Classical.choice, Quot.sound, Cert_Arb_SzegoGap}
+Lattice lower bound: **PROVED**.
+YM Surface #1 (Clay continuum mass gap): **LOCKED OPEN**.
+
+Repo: [yang-mills-gap](https://github.com/DavidFox998/yang-mills-gap) | DOI: [10.5281/zenodo.20670857](https://doi.org/10.5281/zenodo.20670857)
