@@ -1,0 +1,46 @@
+{
+  "title": "Opera Sieve — Theorema Aureum v143 — Certificate Ledger M1-M13 — Lean 4 formal proof chain",
+  "description": "Machine-checkable certificate chain (M1-M10 + M13) for the Riemann Hypothesis pipeline routed through GRH for X_0(143) and the X_0(N) family at N∈{27,32,36,49,64,81,121,143,144,169,196,199,225,256,311}. Ships a Postgres-backed dashboard listing every module's stdout SHA-256, parent bindings, and Lean theorem name. Lean 4 formalization whose main_theorem carries axiom debt=[] (no axiom, no sorry). CI guard re-runs lake build + #print axioms on every merge. M13 BC-CM certificate wiring Bost-Connes for h=1 CM fields into the M10 spine. Entangled Technologies, Volume I.",
+  "keywords": [
+    "opera-sieve",
+    "theorema-aureum-143",
+    "certificate-ledger",
+    "M1-M13",
+    "riemann-hypothesis",
+    "GRH",
+    "X0-143",
+    "lean4",
+    "mathlib",
+    "bost-connes",
+    "CM-fields",
+    "formal-proof",
+    "opera-numerorum",
+    "ORCID:0009-0008-1290-6105"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "en",
+  "version": "v1.0.0-M1-M13-chain",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/DavidFox998/rh-p5-bridge-14",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/DavidFox998/bost-connes",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Fox, David J.",
+      "orcid": "0009-0008-1290-6105",
+      "affiliation": "Independent Researcher, Opera Numerorum"
+    }
+  ]
+}
