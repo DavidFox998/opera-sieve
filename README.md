@@ -168,3 +168,5 @@ Lattice lower bound: **PROVED**.
 YM Surface #1 (Clay continuum mass gap): **LOCKED OPEN**.
 
 Repo: [yang-mills-gap](https://github.com/DavidFox998/yang-mills-gap) | DOI: [10.5281/zenodo.20670857](https://doi.org/10.5281/zenodo.20670857)
+
+**Ensemble:** `sha256:e1617bc96018da4577f153f2e0cd8cc4eda1183434a9624b6cefaedc655db6c5` · hub [`rh-p5-bridge-14`](https://github.com/DavidFox998/rh-p5-bridge-14) · anchor `d04e4bd1`
