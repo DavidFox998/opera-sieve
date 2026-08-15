@@ -1,5 +1,8 @@
 # Theorema Aureum v143 — Certificate Ledger
 
+> **Opera Numerorum ensemble** — 19 repos · chain `7472f4e5` · [REPOS.md →](https://github.com/DavidFox998/rh-p5-bridge-14/blob/main/REPOS.md)
+
+
 Entangled Technologies, The Morning Star Project, **Volume I**.
 
 A machine-checkable certificate chain (M1–M10 + M13) for the Riemann Hypothesis
