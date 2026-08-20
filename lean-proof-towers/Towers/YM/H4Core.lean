@@ -1,11 +1,11 @@
 /-
--- STANDALONE COPY — sync with yang-mills-gap/Towers/YM/H4Core.lean.
+-- STANDALONE COPY — keep in sync with opera-sieve/lean-proof-towers/Towers/YM/H4Core.lean.
 -- SHA must match: run `sha256sum` on both and compare before merging changes.
 -- COXETER DISAMBIGUATION:
 --   |W(H₄)| = 14400  (Weyl/Coxeter GROUP order — used for Lagrange checks below)
 --   |Φ(H₄)| = 120    (root-system size = 600-cell vertex count; NOT group order)
 --   |W(H₃)| = 120    (icosahedral group order — same number, different object)
---   H4_base = 120/11 (BSD ratio used in morningstar-project; ≠ |W(H₄)|)
+--   H4_base = 120/11 (BSD ratio in morningstar-project; unrelated to |W(H₄)|)
 
   H4Core.lean  —  shared mathlib-FREE engine for the H4 strata modules.
 
