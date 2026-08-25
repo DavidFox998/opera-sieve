@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21926561.svg)](https://doi.org/10.5281/zenodo.21926561) [![CI](https://github.com/DavidFox998/opera-sieve/actions/workflows/h4core-sync.yml/badge.svg)](https://github.com/DavidFox998/opera-sieve/actions/workflows/h4core-sync.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21926561.svg)](https://doi.org/10.5281/zenodo.21926561) [![Lean proof build](https://github.com/DavidFox998/opera-sieve/actions/workflows/lean.yml/badge.svg)](https://github.com/DavidFox998/opera-sieve/actions/workflows/lean.yml)
 
 # Theorema Aureum v143 — Certificate Ledger
 
