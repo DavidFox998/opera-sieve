@@ -49,3 +49,11 @@ T            = 1419 = 0x58B    (the circuit witness)
 φ            = (1+√5)/2        (golden ratio, H4 throat slope)
 chain SHA256 = f39ed9a9bd7cc02c6cf415f40b3faaa3c627a5a0d53621766466f31a2211e7ce
 ```
+
+## Ensemble chain membership
+
+This repository is a member of the 19-repo Opera Numerorum ensemble chain locked 2026-08-15.
+The complete lock is recorded locally in [CHAIN.md](CHAIN.md), maintained from the canonical
+[`rh-p5-bridge-14` chain lock](https://github.com/DavidFox998/rh-p5-bridge-14/blob/main/CHAIN.md).
+
+Chain SHA256: `f39ed9a9bd7cc02c6cf415f40b3faaa3c627a5a0d53621766466f31a2211e7ce`
